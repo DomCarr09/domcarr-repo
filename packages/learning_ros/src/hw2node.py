@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
 
 class Talker:
  def __init__(self):
-  self.pub = rospy.Publisher('/turtle1/cmd_vel',Twist, queue_size=10)
+  self.pub = rospy.Publisher('/turtlesim/turtle1/cmd_vel',Twist, queue_size=10)
   self.count = 0
  def turtle(self):
  
@@ -19,30 +19,53 @@ class Talker:
    
   if self.count >2 and self.count <4:
    turn = Twist()
-   turn.angular.z = 1
+   turn.angular.z = 1.5
    self.pub.publish(turn)
+   rospy.logwarn("Turn1")
+   
+  if self.count >4 and self.count <6:
    forward = Twist()
    forward.linear.x = 2
    self.pub.publish(forward)
    rospy.logwarn("Part2")
    
-  if self.count >4 and self.count <6:
+  if self.count >6 and self.count <8:
    turn = Twist()
-   turn.angular.z = 1
+   turn.angular.z = 1.5
    self.pub.publish(turn)
+   rospy.logwarn("Turn2")
+   
+  if self.count >8 and self.count <10:
    forward = Twist()
    forward.linear.x = 2
    self.pub.publish(forward)
    rospy.logwarn("Part3")
    
-  if self.count >6 and self.count <8:
+  if self.count >10 and self.count <12:
    turn = Twist()
-   turn.angular.z = 1
+   turn.angular.z = 1.5
    self.pub.publish(turn)
+   rospy.logwarn("Turn3")
+   
+  if self.count >12 and self.count <14:
+   forward = Twist()
+   forward.linear.x = 2
+   self.pub.publish(forward)
+   rospy.logwarn("Part4")
+   
+  if self.count >14 and self.count <16:
+   turn = Twist()
+   turn.angular.z = 1.5
+   self.pub.publish(turn)
+   rospy.logwarn("Turn4")
+   
+  if self.count >16 and self.count <18:
    forward = Twist()
    forward.linear.x = 2
    self.pub.publish(forward)
    rospy.logwarn("Final")
+   
+  
 
 if __name__ == '__main__':
  try:
