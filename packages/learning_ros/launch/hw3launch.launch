@@ -1,0 +1,10 @@
+<launch>
+
+<include file="$(find turtlesim_helper)/launch/turtlesim.launch"/>
+
+<node pkg="learning_ros" name="hw2node" type="hw2node.py"/>
+<node pkg="learning_ros" name="hw3node" type="hw3node.py"/>
+<node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
+<node pkg="rostopic" name="rostopic" type="rostopic" output="screen" args="echo turtlesim_helper/UnitsLabelled" /> 
+
+</launch>
