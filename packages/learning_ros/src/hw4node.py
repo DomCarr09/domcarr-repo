@@ -21,6 +21,7 @@ class Listener:#
     self.M = Pong.value
     rospy.logwarn("Converted")
     self.pub_msg.value = self.M
+    self.pub_msg.units = "meters"
     self.pub.publish(self.pub_msg)
 
    if mode1 == "feet":

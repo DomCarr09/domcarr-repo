@@ -8,6 +8,6 @@
 <node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
 <node pkg="rostopic" name="rostopic" type="rostopic" output="screen" args="echo HW4Topic" />
 
-<param name="mode1" type="String" value="meters" />
+<param name="mode1" type="String" value="smoots" />
 
 </launch>
