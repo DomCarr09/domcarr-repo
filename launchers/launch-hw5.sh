@@ -1,7 +1,7 @@
 #!/bin/bash
 
-HW_PACKAGE="homework5"
-HW_LAUNCH="hw5.launch"
+HW_PACKAGE="learning_ros"
+HW_LAUNCH="hw5launch.launch"
 
 source /environment.sh
 
