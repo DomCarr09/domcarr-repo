@@ -1,0 +1,9 @@
+<launch>
+
+<include file="$(find odometry_hw)/launch/odom_hw.launch"/>
+
+<node pkg="learning_ros" name="hw6node" type="hw6node.py"/>
+<node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
+<node pkg="rostopic" name="rostopic" type="rostopic" output="screen" args="echo turtlesim_helper/UnitsLabelled" /> 
+
+</launch>
