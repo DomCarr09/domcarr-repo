@@ -1,7 +1,7 @@
 #!/bin/bash
 
-HW_PACKAGE="homework7"
-HW_LAUNCH="hw7.launch"
+HW_PACKAGE="image_work"
+HW_LAUNCH="hw7node.launch"
 
 source /environment.sh
 
