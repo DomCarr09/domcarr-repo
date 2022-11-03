@@ -42,12 +42,13 @@ class ImageCropper:
   ##OR
   
   ##Dilation
-  #kernal = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3))
-  #IMAGE_DILATE = cv2.dilate(image, kernal)
+  kernal = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(7,7))
+  dilated_yellow = cv2.dilate(output_image_yellow, kernal)
+  dilated_white = cv2.dilate(output_image_white, kernal)
   
   ros_cropped = self.bridge.cv2_to_imgmsg(cv_cropped,"bgr8")
-  ros_yellow = self.bridge.cv2_to_imgmsg(output_image_yellow,"mono8")
-  ros_white = self.bridge.cv2_to_imgmsg(output_image_white,"mono8")
+  ros_yellow = self.bridge.cv2_to_imgmsg(dilated_yellow,"mono8")
+  ros_white = self.bridge.cv2_to_imgmsg(dilated_white,"mono8")
   
   self.pub.publish(ros_cropped)
   self.pub3.publish(ros_yellow)
