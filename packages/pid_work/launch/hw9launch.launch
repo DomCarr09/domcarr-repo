@@ -1,0 +1,6 @@
+<launch>
+
+<include file="$(find controls_hw)/launch/start_dynamics.launch"/>
+<node pkg="pid_work" name="hw9node" type="hw9node.py"/>
+
+</launch>
