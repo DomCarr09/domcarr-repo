@@ -1,0 +1,7 @@
+<launch>
+
+<include file="$(find example_service)/launch/fibonacci.launch"/>
+<node pkg="learning_ros" name="hw10node" type="hw10node.py"/>
+#I'm not sure how to start the rqt_console through here
+
+</launch>
