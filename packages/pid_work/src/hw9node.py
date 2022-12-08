@@ -16,7 +16,7 @@ class PIDControl:
   self.integral = 0
   self.old_integral = 0
   self.kp = 0.225
-  self.ki = 0.005 #0.01?
+  self.ki = 0.005
   self.kd = 0.55
   
   ready = rospy.set_param("controller_ready", 'true')
