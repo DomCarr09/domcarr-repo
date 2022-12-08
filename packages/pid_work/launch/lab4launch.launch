@@ -1,0 +1,5 @@
+<launch>
+
+<node pkg="pid_work" name="lab4node" type="lab4node.py"/>
+
+</launch>
